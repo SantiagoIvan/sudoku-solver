@@ -3,7 +3,7 @@ def is_in_the_row(board, row, column):
     for n in board[row]:
         if n == board[row][column]:
             count += 1
-    return False if count < 2 else True
+    return count >= 2
 
 
 def is_in_the_column(board, row, column):
@@ -11,7 +11,7 @@ def is_in_the_column(board, row, column):
     for n in range(9):
         if board[n][column] == board[row][column]:
             count += 1
-    return False if count < 2 else True
+    return count >= 2
 
 
 def is_in_the_square(board, row, column):
@@ -22,7 +22,7 @@ def is_in_the_square(board, row, column):
         for j in range(start_col_index, start_col_index + 3):
             if board[i][j] == board[row][column]:
                 count += 1
-    return False if count < 2 else True
+    return count >= 2
 
 
 def valid_number(board, row, column):

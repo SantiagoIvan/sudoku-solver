@@ -154,8 +154,17 @@ def solve(puzzle):
     return puzzle
 
 
+minipuzzle = [
+    [0,0,0,0],
+    [0,0,0,0],
+    [0,0,0,0],
+    [0,0,0,0]
+]
+minisolution = [[1, 2, 3, 4], [3, 4, 1, 2], [2, 1, 4, 3], [4, 3, 2, 1]]
+
 # Test
 print(solve(puzzle) == solution)
 print(solve(test1) == solution1)
 print(solve(test2) == solution2)
 print(solve(test3) == solution3)
+print(solve(minipuzzle) == minisolution)
